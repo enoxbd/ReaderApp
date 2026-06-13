@@ -6,9 +6,13 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Optimization and obfuscation options
--dontoptimize
+# Enable optimizations so R8 can aggressively shrink and obfuscate
 -allowaccessmodification
 -repackageclasses ''
+-dontusemixedcaseclassnames
+-overloadaggressively
+-useuniqueclassmembernames
+-renamesourcefileattribute ''
 -keepattributes *Annotation*
 -keepattributes Signature
 -keepattributes InnerClasses

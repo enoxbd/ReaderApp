@@ -49,6 +49,7 @@ android {
   buildTypes {
     release {
       isCrunchPngs = true
+      // Enable minification and resource shrinking for release (strong obfuscation)
       isMinifyEnabled = true
       isShrinkResources = true
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
